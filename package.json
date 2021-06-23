@@ -1,0 +1,21 @@
+{
+  "name": "catchit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test:watch": "nodemon  & tsc --project tests/tsconfig.json -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^15.12.4",
+    "ansi-styles": "^6.1.0",
+    "chalk": "^4.1.1",
+    "concordance": "^5.0.4",
+    "lodash": "^4.17.21",
+    "strip-ansi": "^7.0.0",
+    "ts-node": "^10.0.0"
+  }
+}
