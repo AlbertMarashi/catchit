@@ -16,13 +16,10 @@
         "forceConsistentCasingInFileNames": true,
         "types": ["node"],
         "paths": {
-            "@framework-tools/catchit": ["./../src/index.ts"],
-            "@framework-tools/catchit/*": ["./../src/*"]
+            "@framework-tools/catchit": ["./../dist/index.js"],
+            "@framework-tools/catchit/*": ["./../dist/*"]
         }
     },
-    "references": [
-        { "path": "../"}
-    ],
     "exclude": [
         "**/dist"
     ]
