@@ -1,0 +1,18 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": "src",
+        "outDir": "dist",
+        "paths": {
+            "@framework-tools/catchit": ["../catchit/src/index.ts"],
+            "@framework-tools/catchit/*": ["../catchit/src/*"]
+        }
+    },
+    "references": [
+        { "path": "../catchit" }
+    ],
+    "exclude": [
+        "**/dist"
+    ]
+}

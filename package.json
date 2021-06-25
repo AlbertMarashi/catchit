@@ -1,21 +1,27 @@
 {
-  "name": "catchit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
+  "name": "@framework-tools/workspace",
+  "description": "Catchit monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
   "scripts": {
-    "test:watch": "nodemon  & tsc --project tests/tsconfig.json -w"
+    "docs": "doctoc --title '**Table of content**' README.md",
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "pub": "lerna publish",
+    "test": "lerna run test",
+    "lint": "eslint --ext js,ts,tsx ."
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^15.12.4",
-    "ansi-styles": "^6.1.0",
-    "chalk": "^4.1.1",
-    "concordance": "^5.0.4",
-    "lodash": "^4.17.21",
-    "strip-ansi": "^7.0.0",
-    "ts-node": "^10.0.0"
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "eslint": "~7.25.0",
+    "eslint-plugin-import": "~2.22.1",
+    "lerna": "~4.0.0",
+    "typescript": "~4.2.0"
+  },
+  "engines": {
+    "npm": ">=7"
   }
 }

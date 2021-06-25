@@ -1,0 +1,23 @@
+{
+  "name": "@framework-tools/catchit-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": ["dist"],
+  "exports": {
+    ".": "./dist/index.js",
+    "./": "./dist/"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "test:watch": "nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@framework-tools/catchit": "1.0.0",
+    "@types/node": "14.17.4"
+  }
+}
