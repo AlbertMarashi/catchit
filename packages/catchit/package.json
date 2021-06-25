@@ -1,6 +1,6 @@
 {
   "name": "@framework-tools/catchit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -16,6 +16,9 @@
     "build": "tsc",
     "build:watch": "tsc -w"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -27,5 +30,5 @@
     "lodash": "^4.17.21",
     "strip-ansi": "^7.0.0"
   },
-  "gitHead": "d38bf18793bca0969e3ea7fcffcc9e9ded01a8e9"
+  "gitHead": "bc2d21598fc9463862e038bd14157d58945558bc"
 }
