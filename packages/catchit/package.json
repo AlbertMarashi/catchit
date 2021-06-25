@@ -1,6 +1,6 @@
 {
   "name": "@framework-tools/catchit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -26,5 +26,5 @@
     "lodash": "^4.17.21",
     "strip-ansi": "^7.0.0"
   },
-  "gitHead": "51d78f51f9222e1c7fcf26f60355f33527a8d510"
+  "gitHead": "0ef37024e1150d075c2c3796c4058c9dc505d8f5"
 }
