@@ -25,5 +25,6 @@
     "draftlog": "^1.0.13",
     "lodash": "^4.17.21",
     "strip-ansi": "^7.0.0"
-  }
+  },
+  "gitHead": "51d78f51f9222e1c7fcf26f60355f33527a8d510"
 }
