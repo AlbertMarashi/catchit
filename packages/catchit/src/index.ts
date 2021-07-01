@@ -55,9 +55,9 @@ export function runner () {
 
     /**
      * A todo unit test that doesn't throw any errors
-     * 
+     *
      * Used for tests that still need to be done
-     * @param name 
+     * @param name
      */
     test.todo = function(name: string) {
         currentArray.push({type: 'todo', name, fn: () => {}})
@@ -65,9 +65,9 @@ export function runner () {
 
     /**
      * Expect a certain value to equal the value of actual
-     * 
+     *
      * @param actual any value
-     * @returns 
+     * @returns
      */
     function expect(actual: any) {
         let actualDescriptor = concordance.describe(actual)
@@ -85,10 +85,10 @@ export function runner () {
         let results: TestResult[] = []
 
         let indentation = new Array(depth * 2).fill(' ').join('')
-        
+
         for (let testOrDescribe of testsArray) {
             if(testOrDescribe.type === 'describe') {
-                
+
                 console.log(indentation + `${testOrDescribe.name}`)
                 results.push(...await runTests(testOrDescribe.tests, depth + 1))
             } else {
@@ -123,7 +123,7 @@ export function runner () {
             let todos = results.filter(testResult => testResult.type == 'todo') as unknown as TestTodo[]
             let passes = results.filter(testResult => testResult.type == 'pass') as unknown as TestPass[]
 
-            console.log(chalk.bold.redBright(`\nGot test failures: ${fails.length}`))
+            if(!fails.length) console.log(chalk.bold.redBright(`\nGot test failures: ${fails.length}`))
             fails.map(failure => {
                 console.log(chalk.bold.redBright(`\n● ${failure.test.name}\n`))
                 if(failure.error instanceof CatchitAssertionError) {

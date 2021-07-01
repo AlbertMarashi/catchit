@@ -2,14 +2,20 @@
   "name": "@framework-tools/catchit",
   "version": "1.0.5",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "files": [
     "dist"
   ],
   "exports": {
     ".": "./dist/index.js",
-    "./": "./dist/"
+    "./*": "./dist/*"
+  },
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "./dist/index.d.ts": [ "./dist/index.d.ts" ],
+      "*": [ "dist/*" ]
+    }
   },
   "private": false,
   "scripts": {
@@ -30,5 +36,5 @@
     "lodash": "^4.17.21",
     "strip-ansi": "^7.0.0"
   },
-  "gitHead": "bc2d21598fc9463862e038bd14157d58945558bc"
+  "gitHead": "1285aa88b53d208ecab853ba2b6920a860b52b00"
 }

@@ -6,7 +6,7 @@
 
 
 ## Publishing
-`lerna
+`lerna 
 
 ### Project Structure
 
