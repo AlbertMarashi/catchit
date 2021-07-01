@@ -1,6 +1,6 @@
 {
   "name": "@framework-tools/catchit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "type": "module",
   "files": [
@@ -13,8 +13,12 @@
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "./dist/index.d.ts": [ "./dist/index.d.ts" ],
-      "*": [ "dist/*" ]
+      "./dist/index.d.ts": [
+        "./dist/index.d.ts"
+      ],
+      "*": [
+        "dist/*"
+      ]
     }
   },
   "private": false,
