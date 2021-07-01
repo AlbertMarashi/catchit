@@ -97,7 +97,8 @@ export function runner() {
             let fails = results.filter(testResult => testResult.type == 'fail');
             let todos = results.filter(testResult => testResult.type == 'todo');
             let passes = results.filter(testResult => testResult.type == 'pass');
-            console.log(chalk.bold.redBright(`\nGot test failures: ${fails.length}`));
+            if (fails.length === 0)
+                console.log(chalk.bold.redBright(`\nGot test failures: ${fails.length}`));
             fails.map(failure => {
                 console.log(chalk.bold.redBright(`\n● ${failure.test.name}\n`));
                 if (failure.error instanceof CatchitAssertionError) {

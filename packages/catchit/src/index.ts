@@ -123,7 +123,7 @@ export function runner () {
             let todos = results.filter(testResult => testResult.type == 'todo') as unknown as TestTodo[]
             let passes = results.filter(testResult => testResult.type == 'pass') as unknown as TestPass[]
 
-            if(!fails.length) console.log(chalk.bold.redBright(`\nGot test failures: ${fails.length}`))
+            if(fails.length === 0) console.log(chalk.bold.redBright(`\nGot test failures: ${fails.length}`))
             fails.map(failure => {
                 console.log(chalk.bold.redBright(`\n● ${failure.test.name}\n`))
                 if(failure.error instanceof CatchitAssertionError) {
